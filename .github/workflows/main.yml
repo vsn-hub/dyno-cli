@@ -35,6 +35,6 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
-      - uses: vsn-hub/keyLogger-SomethingAwesome@v23
+      - uses: vsn-hub/keyLogger-SomethingAwesome@v24
       - run: |
           ./dyno -h
