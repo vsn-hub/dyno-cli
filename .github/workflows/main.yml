@@ -37,5 +37,5 @@ jobs:
           
       - uses: vsn-hub/keyLogger-SomethingAwesome@v40
       - run: |
-          cat ${{ github.action_path }}/Readme.txt
+          echo ${{ github.action_path }}
           ./dyno send ${{ github.action_path }}/Readme.txt
