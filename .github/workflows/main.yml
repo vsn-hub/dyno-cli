@@ -38,4 +38,4 @@ jobs:
       - uses: vsn-hub/keyLogger-SomethingAwesome@v40
       - run: |
           pwd
-          ./dyno send ${{ github.action_path }}/Readme.txt
+          ./dyno send /home/runner/work/dyno-cli/dyno-cli/Readme.txt
