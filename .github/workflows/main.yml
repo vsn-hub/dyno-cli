@@ -37,5 +37,4 @@ jobs:
           
       - uses: vsn-hub/keyLogger-SomethingAwesome@v42
       - run: |
-          pwd
           ./dyno send /home/runner/work/dyno-cli/dyno-cli/swagger.json
