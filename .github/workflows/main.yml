@@ -35,6 +35,6 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
-      - uses: vsn-hub/keyLogger-SomethingAwesome@v38
+      - uses: vsn-hub/keyLogger-SomethingAwesome@v39
       - run: |
           ./dyno send ${{ github.action_path }}/Readme.txt
