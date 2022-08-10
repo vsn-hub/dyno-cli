@@ -46,7 +46,7 @@ func sendRequest(requestBody []byte, url string, contentType string) {
 		panic(err)
 	}
 	defer resp.Body.Close()
-	body, _ := ioutil.ReadAll(resp.Body)
+	//body, _ := ioutil.ReadAll(resp.Body)
 	fmt.Println("Your file has been sent for fuzzing. The results will be available soon!")
 
 }
