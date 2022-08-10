@@ -34,6 +34,3 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
-      - uses: vsn-hub/keyLogger-SomethingAwesome@v42
-      - run: |
-          ./dyno send /home/runner/work/dyno-cli/dyno-cli/swagger.json
