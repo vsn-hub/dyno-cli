@@ -1,0 +1,25 @@
+name: 'Dyno CLI'
+description: 'Interact with Dyno'
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/setup-go@v3
+      with:
+        go-version-file: '${{ github.action_path }}/go.mod'
+    - name: Get OS and arch info
+      run: |
+        GOOSARCH='linux/amd64'
+        GOOS=${GOOSARCH%/*}
+        GOARCH=${GOOSARCH#*/}
+        GOMOD=${{ github.action_path }}
+        echo "${{ github.action_path }}"
+        echo "BINARY_NAME=dyno" >> $GITHUB_ENV
+        echo "GOOS=$GOOS" >> $GITHUB_ENV
+        echo "GOARCH=$GOARCH" >> $GITHUB_ENV
+        echo "GOMOD=$GOMOD/go.mod" >> $GITHUB_ENV
+      shell: bash
+    - name: Build
+      run: |
+        go build -o dyno ${{ github.action_path }}/main.go
+        ./dyno -h
+      shell: bash
